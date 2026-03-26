@@ -97,10 +97,25 @@ a:active {
   margin-left: 2.5%;
   margin-right: 2.5%;
   display: inline-block;
+  position: relative;
 }
 
 #posts-principais .post .titulo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
   text-shadow: 1px 1px black;
+  opacity: 0; /* começa invisível */
+  transition: all 0.5s ease;
+  box-sizing: border-box;
+}
+
+#posts-principais .post:hover .titulo {
+  top: 6px;
+  opacity: 1;
 }
 
 #posts-principais .post img {
@@ -165,6 +180,8 @@ a:active {
   background-size: 300px;
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
+  position: sticky;
+  top: 0;
 }
 
 #tags h1 {
@@ -208,9 +225,6 @@ a:active {
 .tag-3 {
   font-size: 150%;
 }
-
-
-
 
 
 /* --- Rodapé --- */
@@ -293,4 +307,40 @@ a:active {
   color: black;
   border-color: currentColor;
   box-shadow: none;
+}
+
+.boo {
+  position: absolute;
+  width: 40px;
+  opacity: 0.2;
+  transition: all 300ms ease;
+}
+
+.boo:hover {
+  opacity: 1;
+}
+
+.boo1 {
+  top: 20px;
+  left: 400px;
+}
+
+.boo2 {
+  top: 20px;
+  right: 420px;
+}
+
+.boo3 {
+  top: 800px;
+  right: 80px;
+}
+
+.boo4 {
+  top: 500px;
+  right: 700px;
+}
+
+.boo5 {
+  top: 550px;
+  right: 180px;
 }
